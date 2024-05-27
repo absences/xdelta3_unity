@@ -5,10 +5,15 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
 
+import android.net.Uri;
+import android.os.Build;
 import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.core.content.FileProvider;
+
+import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -107,4 +112,23 @@ public class UnityTool {
     {
        return XdeltaPatch.nativePatch(encode,inPath,srcPath,outPath);
     }
+
+    /***
+     * 安装apk
+     * @param apkPath
+     */
+    public void InstallApk(String apkPath) {
+        File file = new File(apkPath);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        if (Build.VERSION.SDK_INT >= 24) { //Android 7.0及以上
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            Uri apkUri = FileProvider.getUriForFile(getActivity(), getActivity().getPackageName() + ".fileprovider", file);
+            intent.setDataAndType(apkUri, "application/vnd.android.package-archive");
+        } else {
+            intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
+        getActivity().startActivity(intent);
+    }
+
 }
