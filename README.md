@@ -15,3 +15,17 @@ android studio jni编译xdelta
   生成debug.aar 放入Plugins/Android
     添加androidx
  或者直接使用Plugins
+
+    整包差分更新流程：
+
+     生成新包与旧包的差分文件上传至云端
+
+     客户端下载差分文件
+
+     将Context.getPackageResourcePath() 与差分文件合并
+
+    安装apk
+    AndroidJavaObject jc = new AndroidJavaObject("com.gygame.lib.UnityTool");
+    var jo = jc.CallStatic<AndroidJavaObject>("Instance");
+    jo.Call("InstallApk", apkurl );
+
