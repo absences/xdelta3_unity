@@ -22,7 +22,7 @@ android studio jni编译xdelta
 
      客户端下载差分文件
 
-     将Context.getPackageResourcePath() 与差分文件合并
+     将Context.getPackageCodePath() 与差分文件合并
 
     安装apk
     AndroidJavaObject jc = new AndroidJavaObject("com.gygame.lib.UnityTool");
