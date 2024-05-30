@@ -130,5 +130,7 @@ public class UnityTool {
         }
         getActivity().startActivity(intent);
     }
-
+    public String getPackageCodePath(){
+        return getActivity().getPackageCodePath();
+    }
 }

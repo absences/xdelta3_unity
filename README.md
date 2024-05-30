@@ -1,8 +1,16 @@
 # xdelta3_unity
 
-unity使用 xdelta3 差分更新apk
+unity android 使用 xdelta3 进行差分更新apk
+  tips:google app store 不可使用安装apk权限，会被拒
+#文件目录
 
-android studio jni编译xdelta
+  /Unity  unity 2019.4.40 示例工程
+
+  /XdeltaLib 安卓工程，编译aar供unity调用
+
+  /xdelta vs2022 可编译工程生成64位exe（Debug x64）32位更改报错处为4即可
+
+
 
 调用: 生成patch或者应用patch
   AndroidJavaObject jc = new AndroidJavaObject("com.gygame.lib.UnityTool");
@@ -10,19 +18,13 @@ android studio jni编译xdelta
   return jo.Call<int>("xdelta3_patch", opType, inPath, srcPath, outPath);
 
 
-  com.gygame.lib 是安卓工程包名
-
-  生成debug.aar 放入Plugins/Android
-    添加androidx
- 或者直接使用Plugins
-
     整包差分更新流程：
 
-     生成新包与旧包的差分文件上传至云端
+    生成新包与旧包的差分文件上传至云端
 
-     客户端下载差分文件
+    客户端下载差分文件
 
-     将Context.getPackageCodePath() 与差分文件合并
+    将Context.getPackageCodePath() 与差分文件合并为新的apk
 
     安装apk
     AndroidJavaObject jc = new AndroidJavaObject("com.gygame.lib.UnityTool");
