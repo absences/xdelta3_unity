@@ -1,7 +1,9 @@
 # xdelta3_unity
 
 unity android 使用 xdelta3 进行差分更新apk
+
   tips:google app store 不可使用安装apk权限，会被拒
+
 #文件目录
 
   /Unity  unity 2019.4.40 示例工程
