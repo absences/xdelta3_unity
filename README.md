@@ -11,7 +11,7 @@ unity android 使用 xdelta3 进行差分更新apk
   /xdelta vs2022 可编译工程生成64位exe（Debug x64）32位更改报错处为4即可
 
 
-调用: 生成patch或者应用patch
+调用: 应用patch 
 
     AndroidJavaObject jc = new AndroidJavaObject("com.gygame.lib.UnityTool");
     var jo = jc.CallStatic<AndroidJavaObject>("Instance");
@@ -26,6 +26,7 @@ unity android 使用 xdelta3 进行差分更新apk
 将Context.getPackageCodePath() 与差分文件合并为新的apk
 
 安装apk
+
     AndroidJavaObject jc = new AndroidJavaObject("com.gygame.lib.UnityTool");
     var jo = jc.CallStatic<AndroidJavaObject>("Instance");
     jo.Call("InstallApk", apkurl );
