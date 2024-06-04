@@ -12,6 +12,7 @@ unity android 使用 xdelta3 进行差分更新apk
 
   /xdelta vs2022 可编译工程生成64位exe（Debug x64）32位更改报错处为4即可
 
+  github action 工具已经写好，提交代码即可触发构建 :)
 
 调用: 应用patch 
 
