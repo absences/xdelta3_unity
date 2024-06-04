@@ -4,7 +4,7 @@ on:
   push:
     paths: 
       - xdelta3/**
-      - .github/workflows/main.yml
+      - .github/workflows/build_win.yml
 
 jobs:
    windows:
