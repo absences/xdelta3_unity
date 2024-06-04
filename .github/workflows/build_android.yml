@@ -4,7 +4,7 @@ on:
   push:
     paths: 
       - XdeltaLib/**
-      - .github/workflows/build_win.yml
+      - .github/workflows/build_android.yml
 
 jobs:
    windows:
