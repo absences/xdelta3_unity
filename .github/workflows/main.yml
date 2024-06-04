@@ -18,7 +18,7 @@ jobs:
          msbuild-architecture: x64
          
     - name: Build app for debug
-      run: msbuild xdelta3\xdelta3.vcxproj -t:rebuild -verbosity:diag -property:Configuration=xdelta3-64
+      run: msbuild xdelta3\xdelta3.vcxproj -t:rebuild -verbosity:diag -property:Configuration=xdelta3-64 -property:Platform=x64
      
     - name: Upload
       uses: actions/upload-artifact@v2
