@@ -24,7 +24,9 @@ jobs:
       run: chmod +x ./XdeltaLib/gradlew
     - run: echo "Building Debug AAR."  
     - name: Build with Gradle
-      run: ./XdeltaLib/gradlew build
+      run: |
+        cd XdeltaLib
+        gradlew build
     - run: echo "Build status report=${{ job.status }}."
 
     - name: Upload
