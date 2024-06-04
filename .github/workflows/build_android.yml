@@ -26,7 +26,7 @@ jobs:
     - name: Build with Gradle
       run: |
         cd XdeltaLib
-        gradlew build
+        ./gradlew build
     - run: echo "Build status report=${{ job.status }}."
 
     - name: Upload
