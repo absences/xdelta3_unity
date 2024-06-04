@@ -14,9 +14,11 @@ jobs:
     
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v2
-
+      with:
+         msbuild-architecture: x64
     - name: Build app for debug
       run: msbuild xdelta3\xdelta3.vcxproj -t:rebuild -verbosity:diag -property:Configuration=Debug
+     
 
     - name: Upload
       uses: actions/upload-artifact@v2
