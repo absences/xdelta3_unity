@@ -10,7 +10,7 @@ jobs:
    build_android:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     
     - run: echo "Setting up JDK" 
     - name: set up JDK 17
@@ -30,7 +30,7 @@ jobs:
     - run: echo "Build status report=${{ job.status }}."
 
     - name: Upload
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         path: ./XdeltaLib/app/build/outputs/aar/app-release.aar
         name: xdelta3_lib
