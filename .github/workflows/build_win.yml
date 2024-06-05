@@ -10,7 +10,7 @@ jobs:
    windows:
     runs-on: windows-2022
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v2
@@ -21,7 +21,7 @@ jobs:
       run: msbuild xdelta3\xdelta3.vcxproj -t:rebuild -verbosity:diag -property:Configuration=xdelta3-64 -property:Platform=x64
      
     - name: Upload
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         path: ./xdelta3/x64/**/*
         name: xdelta3_x64
