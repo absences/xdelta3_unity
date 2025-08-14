@@ -8,7 +8,7 @@ unity android 使用 xdelta3 进行差分更新apk
 
   /Unity  unity 2019.4.40 示例工程
 
-  /XdeltaLib 安卓工程，编译aar供unity调用
+  /xdeltalib 安卓工程，编译aar供unity调用
 
   /xdelta vs2022 可编译工程生成64位exe（Debug x64）32位更改报错处为4即可
 

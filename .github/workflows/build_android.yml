@@ -3,7 +3,7 @@ name: build_android
 on: 
   push:
     paths: 
-      - XdeltaLib/**
+      - xdeltalib/**
       - .github/workflows/build_android.yml
 
 jobs:
@@ -21,16 +21,16 @@ jobs:
         cache: gradle
     - run: echo "The workflow is now ready to test your code."
     - name: Grant execute permission for gradlew
-      run: chmod +x ./XdeltaLib/gradlew
+      run: chmod +x ./xdeltalib/gradlew
     - run: echo "Building Release AAR."  
     - name: Build with Gradle
       run: |
-        cd XdeltaLib
+        cd xdeltalib
         ./gradlew build
     - run: echo "Build status report=${{ job.status }}."
 
     - name: Upload
       uses: actions/upload-artifact@v4
       with:
-        path: ./XdeltaLib/app/build/outputs/aar/app-release.aar
+        path: ./xdeltalib/app/build/outputs/aar/app-release.aar
         name: xdelta3_lib
