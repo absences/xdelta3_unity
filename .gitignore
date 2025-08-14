@@ -1,0 +1,10 @@
+Unity/Library/
+Unity/Logs/
+Unity/Temp/
+*csproj
+Unity/.vsconfig
+Unity/Unity.sln
+.vs/
+XdeltaLib/.idea/
+xdelta3/xdelta3.vcxproj.user
+Unity/UserSettings/

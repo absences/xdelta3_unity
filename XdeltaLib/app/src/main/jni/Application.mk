@@ -15,5 +15,5 @@
 
 APP_STL := c++_static
 # APP_BUILD_SCRIPT := Android.mk
-APP_PLATFORM := android-16
+APP_PLATFORM := android-35
 APP_ABI := all

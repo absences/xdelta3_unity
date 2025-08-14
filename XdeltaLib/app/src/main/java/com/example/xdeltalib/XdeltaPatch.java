@@ -1,4 +1,4 @@
-package com.gygame.lib;
+package com.example.xdeltalib;
 public class XdeltaPatch {
 
     static {

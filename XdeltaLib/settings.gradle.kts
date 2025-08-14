@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "XdeltaLib"
+rootProject.name = "xdeltalib"
 include(":app")
  

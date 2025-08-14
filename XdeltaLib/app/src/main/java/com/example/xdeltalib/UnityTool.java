@@ -1,4 +1,4 @@
-package com.gygame.lib;
+package com.example.xdeltalib;
 
 import android.app.Activity;
 import android.content.ClipData;
